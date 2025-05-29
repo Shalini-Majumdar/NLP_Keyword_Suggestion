@@ -38,17 +38,11 @@ A simple NLP-powered web application that provides intelligent word suggestions 
 # How to Run the Program
 - Clone or Download the Project
 git clone https://github.com/Shalini-Majumdar/NLP_Keyword_Suggestion.git
-cd keyboard-suggestion-app
 
-- Add a Training File
-Make sure a plain-text file named book.txt is present in the root directory.
+- Add a Training File: Make sure a plain-text file named book.txt is present in the root directory.
 
-- Set Up Python Environment
-Ensure you have Python 3.7–3.13 installed.
-Install Flask
+- Ensure you have Python 3.7–3.13 installed.
 
-- Run the Flask Server
-python app.py
+- Install Flask and Run the Flask Server: python app.py
 
-- Use the Application
-Open your browser and go to: http://127.0.0.1:5000
+- Open your browser and go to: http://127.0.0.1:5000
