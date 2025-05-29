@@ -14,18 +14,24 @@ A simple NLP-powered web application that provides intelligent word suggestions 
 ---
 
 # Tools Used
-- Programming Language: Python – Core logic and backend processing
-  
-- Web Framework/Backend: Flask – Lightweight Python web framework for serving the app
-  
-- Frontend :HTML5 – Structure of the web page (user interface)
-           :CSS3 – Styling the UI with a clean, responsive look
-           :JavaScript (Vanilla) – For making AJAX calls to the Flask backend
+- **Programming Language**  
+  Python – Core logic and backend processing
 
-- NLP and Text Processing: Regular Expressions (re module) – Tokenization and word extraction
-                         :collections.defaultdict – Efficient word frequency dictionary
+- **Web Framework / Backend**  
+  Flask – Lightweight Python web framework for serving the app
 
-- File Handling & Data: book.txt – Custom training corpus to build word frequencies
+- **Frontend**
+  - HTML5 – Structure of the web page (user interface)
+  - CSS3 – Styling the UI with a clean, responsive look
+  - JavaScript (Vanilla) – For making AJAX calls to the Flask backend
+
+- **NLP and Text Processing**
+  - Regular Expressions (`re` module) – Tokenization and word extraction
+  - `collections.defaultdict` – Efficient word frequency dictionary
+
+- **File Handling & Data**
+  - `book.txt` – Custom training corpus to build word frequencies
+
 
 # How to Run the Program
 Step 1: Clone or Download the Project
