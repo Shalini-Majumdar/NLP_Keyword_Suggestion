@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Suggestion</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Keyboard Auto Suggestion</h1>
+        <input type="text" id="wordInput" placeholder="Start typing a word..." onkeyup="getSuggestions()">
+        <ul id="suggestions"></ul>
+    </div>
+
+    <script>
+        function getSuggestions() {
+            let text = document.getElementById('wordInput').value;
+            if (text.length === 0) {
+                document.getElementById('suggestions').innerHTML = '';
+                return;
+            }
+            fetch('/suggest', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `text=${text}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                let suggestionBox = document.getElementById('suggestions');
+                suggestionBox.innerHTML = '';
+                data.forEach(word => {
+                    let li = document.createElement('li');
+                    li.textContent = word;
+                    suggestionBox.appendChild(li);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
